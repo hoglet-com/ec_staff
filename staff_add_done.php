@@ -19,7 +19,7 @@
           $dbh = new PDO($dsn, $user, $password);
           $dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-          $sql = 'INSERT INTO mst_staff(name, password) VALUES (?, ?)';
+          $sql = "INSERT INTO `mst_staff` (`name`, `password`) VALUES (?, ?)";
           $stmt = $dbh->prepare($sql);
           $data[] = $staff_name;
           $data[] = $staff_pass;
