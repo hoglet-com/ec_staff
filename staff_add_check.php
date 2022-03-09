@@ -41,6 +41,7 @@
               print '<form method="post" action="staff_add_done.php">';
               print '<input type="hidden" name="name" value="'.$staff_name.'">';
               print '<br />';
+              #次のページに変数を引き継ぐために必要！
               print '<input type="hidden" name="pass" value="'.$staff_pass.'">';
               print '<br />';
               print '<input type="button" onclick="history.back()" value="戻る">';
