@@ -14,7 +14,7 @@
             $dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // 1は全部という意味
-            $sql='SELECT name FROM mst_staff WHERE 1';
+            $sql='SELECT code,name FROM mst_staff WHERE 1';
             //クエリー作成
             $stmt=$dbh->prepare($sql);
             //プレースホルダに値をセットし、SQL文を実行
@@ -23,6 +23,7 @@
             $dbh=null;
 
             print 'スタッフ一覧 <br/><br/>';
+            print '<form method="post" action="staff_edit.php">';
 
             while(true){
                 // $stmtから1レコードを取り出す
@@ -30,9 +31,15 @@
                 if($rec==false){
                     break;
                 }
+
+                // 連結演算子( . ) で連結して print をしている
+                print '<input type="radio" name="staffcode" value="' . $rec['code'] . '">';
+
                 print $rec['name'];
                 print '<br/>';
             }
+            print '<input type="submit" value="修正">';
+            print '</form>';
 
         }catch(Exception $e){
             print 'ただいま障害によりご迷惑をお掛けしております。';
