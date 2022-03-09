@@ -36,6 +36,7 @@
                 print '<input type="radio" name="staffcode" value="' . $rec['code'] . '">';
 
                 print $rec['name'];
+                print '<input type="hidden" name="staffname" value="' . $rec['name'] . '">';
                 print '<br/>';
             }
             print '<input type="submit" value="修正">';
