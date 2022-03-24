@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>EC-SITE</title>
-  </head>
-  <body>
-    Hello World
-  </body>
-</html>
+<?php
+
+if(isset($_POST['edit'])==true){
+    header('Location: staff_edit.php');
+    exit();
+}
+
+if(isset($_POST['delete'])==true){
+    header('Location: staff_delete.php');
+    exit();
+}
+
+
+
+?>
