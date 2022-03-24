@@ -9,8 +9,8 @@
         try{
 
             // staff_listでのstaffcodeを受け取っている
-            $staff_code=$_POST['staffcode'];
-            $staff_name=$_POST['staffname'];
+            $staff_code=$_GET['staffcode'];
+            //$staff_name=$_GET['staffname'];
 
             $dsn = 'mysql:dbname=shop;host=localhost;charset=utf8';
             $user = 'root';
@@ -44,7 +44,7 @@
         <form method="POST" action="staff_edit_check.php">
         <input type="hidden" name="code" value="<?php print $staff_code; ?>">
         スタッフ名<br/>
-        <input type="text" name="name" style="width:200px" value="<?php print $staff_name; ?>"><br/>
+        <input type="text" name="name" style="width:200px" value="テスト太郎"><br/>
 
         パスワードを入力してください。<br/>
         <input type="password" name="pass" style="width:100px"><br/>
