@@ -14,7 +14,7 @@
             $dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // 1は全部という意味
-            $sql='SELECT code,name FROM mst_staff WHERE 1';
+            $sql='SELECT * FROM mst_staff WHERE 1';
             //クエリー作成
             $stmt=$dbh->prepare($sql);
             //プレースホルダに値をセットし、SQL文を実行
@@ -34,9 +34,7 @@
 
                 // 連結演算子( . ) で連結して print をしている
                 print '<input type="radio" name="staffcode" value="' . $rec['code'] . '">';
-
                 print $rec['name'];
-                //print '<input type="hidden" name="staffname" value="' . $rec['name'] . '">';
                 print '<br/>';
             }
 

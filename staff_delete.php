@@ -26,6 +26,10 @@
             //プレースホルダに値をセットし、SQL文を実行
             $stmt->execute($data);
 
+            //$staff_nameにDBに保存されているnameを格納している
+            $rec=$stmt->fetch(PDO::FETCH_ASSOC);
+            $staff_name=$rec['name'];
+
             $dbh=null;
 
         }catch(Exception $e){
@@ -40,6 +44,8 @@
         スタッフコード<br/>
         <?php print $staff_code; ?>
         <br/>
+        スタッフ名<br/>
+        <?php print $staff_name; ?>
         <br/>
         <form method="POST" action="staff_delete_done.php">
         <input type="hidden" name="code" value="<?php print $staff_code; ?>">
