@@ -49,5 +49,8 @@
             exit();
         }
       ?>
+<br/>
+新しくスタッフを追加する場合はコチラ。<br/>
+<input type="button" onclick="location.href='staff_add.php'" value="追加">
   </body>
 </html>
