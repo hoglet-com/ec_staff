@@ -23,7 +23,7 @@
             $dbh=null;
 
             print 'スタッフ一覧 <br/><br/>';
-            print '<form method="post" action="staff_edit.php">';
+            print '<form method="post" action="staff_branch.php">';
 
             while(true){
                 // $stmtから1レコードを取り出す
@@ -39,7 +39,8 @@
                 print '<input type="hidden" name="staffname" value="' . $rec['name'] . '">';
                 print '<br/>';
             }
-            print '<input type="submit" value="修正">';
+            print '<input type="submit" name="edit" value="修正">';
+            print '<input type="submit" name="delete" value="削除">';
             print '</form>';
 
         }catch(Exception $e){
