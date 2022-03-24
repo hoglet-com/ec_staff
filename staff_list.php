@@ -39,6 +39,7 @@
                 //print '<input type="hidden" name="staffname" value="' . $rec['name'] . '">';
                 print '<br/>';
             }
+            print '<input type="submit" name="add" value="追加">';
             print '<input type="submit" name="edit" value="修正">';
             print '<input type="submit" name="delete" value="削除">';
             print '</form>';
@@ -49,8 +50,5 @@
             exit();
         }
       ?>
-<br/>
-新しくスタッフを追加する場合はコチラ。<br/>
-<input type="button" onclick="location.href='staff_add.php'" value="追加">
   </body>
 </html>
